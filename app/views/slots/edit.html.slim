@@ -1,8 +1,11 @@
-h1 時間帯の編集
+.container
+  h1 時間帯の編集
 
 == render 'form'
 
-= link_to '閲覧', @slot
-'  |
-= link_to '戻る', slots_path
+.container
+  .btn-group
+    = link_to '閲覧', @slot, :class => "btn btn-sm btn-primary"
+    '  |
+    = link_to '戻る', slots_path, :class => "btn btn-sm btn-primary"
 

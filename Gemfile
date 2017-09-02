@@ -37,6 +37,9 @@ gem 'slim-rails'
 gem 'jquery-rails'
 gem 'bootstrap', '~> 4.0.0.alpha4'
 gem 'paperclip'
+gem 'simple_form'
+gem 'momentjs-rails', '>= 2.9.0'
+
 
 group :development, :test do
   gem 'sqlite3'
