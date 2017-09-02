@@ -27,7 +27,7 @@
           = link_to '閲覧', slot, :class => "btn btn-sm btn-primary"
         .d-none.d-md-inline
           = link_to '編集', edit_slot_path(slot), :class => "btn btn-sm btn-primary"
-        = link_to '削除', slot, data: { confirm: 'Are you sure?' }, method: :delete, :class => "btn btn-sm btn-primary"
+        = link_to '削除', slot, data: { confirm: '本当に削除しますか？' }, method: :delete, :class => "btn btn-sm btn-primary"
 
 br
 
