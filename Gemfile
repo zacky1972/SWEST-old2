@@ -34,6 +34,7 @@ gem 'jbuilder', '~> 2.5'
 # gem 'capistrano-rails', group: :development
 
 gem 'slim-rails'
+gem 'jquery-rails'
 gem 'bootstrap', '~> 4.0.0.alpha4'
 gem 'paperclip'
 
