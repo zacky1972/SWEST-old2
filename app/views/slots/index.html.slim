@@ -1,25 +1,35 @@
-h1 時間帯のリスト
+.container
+  h1 時間帯のリスト
 
-table
-  thead
-    tr
-      th 時間帯の名称
-      th 開始時刻
-      th 終了時刻
-      th
-      th
-      th
+.container
+  .row.hd
+    .col-3 時間帯名称
+    .col-6.col-md-3 開始時刻
+    .col-3.d-md-none
+    .col-3.d-md-none
+    .col-6.col-md-3 終了時刻
+    .col-3
 
-  tbody
-    - @slots.each do |slot|
-      tr
-        td = slot.name
-        td = slot.from
-        td = slot.to
-        td = link_to 'Show', slot
-        td = link_to 'Edit', edit_slot_path(slot)
-        td = link_to 'Destroy', slot, data: { confirm: 'Are you sure?' }, method: :delete
+  - @slots.each do |slot|
+    .row
+      .col-3 = slot.name
+      .col-6.col-md-3 = datetimeWithoutTZ slot.from
+      .col-3.d-md-none.btn-group
+        = link_to '閲覧', slot, :class => "btn btn-sm btn-primary"
+      .col-3.d-md-none
+      .col-6.col-md-3 = datetimeWithoutTZ slot.to
+      .col-3.d-md-none.btn-group
+        = link_to '編集', edit_slot_path(slot), :class => "btn btn-sm btn-primary"
+      .col-3.d-md-none
+      .col-6.d-md-none
+      .col-3.btn-group
+        .d-none.d-md-inline
+          = link_to '閲覧', slot, :class => "btn btn-sm btn-primary"
+        .d-none.d-md-inline
+          = link_to '編集', edit_slot_path(slot), :class => "btn btn-sm btn-primary"
+        = link_to '削除', slot, data: { confirm: 'Are you sure?' }, method: :delete, :class => "btn btn-sm btn-primary"
 
 br
 
-= link_to '新規時間帯', new_slot_path
+.container
+  = link_to '新規時間帯', new_slot_path
