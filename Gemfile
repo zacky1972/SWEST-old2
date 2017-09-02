@@ -35,6 +35,7 @@ gem 'jbuilder', '~> 2.5'
 
 gem 'slim-rails'
 gem 'bootstrap', '~> 4.0.0.alpha4'
+gem 'paperclip'
 
 group :development, :test do
   gem 'sqlite3'
