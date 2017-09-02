@@ -1,0 +1,15 @@
+p#notice = notice
+
+p
+  strong 時間帯の名称:
+  = @slot.name
+p
+  strong 開始時刻:
+  = @slot.from
+p
+  strong 終了時刻:
+  = @slot.to
+
+= link_to '編集', edit_slot_path(@slot)
+'  |
+= link_to '戻る', slots_path

@@ -1,0 +1,25 @@
+h1 時間帯のリスト
+
+table
+  thead
+    tr
+      th 時間帯の名称
+      th 開始時刻
+      th 終了時刻
+      th
+      th
+      th
+
+  tbody
+    - @slots.each do |slot|
+      tr
+        td = slot.name
+        td = slot.from
+        td = slot.to
+        td = link_to 'Show', slot
+        td = link_to 'Edit', edit_slot_path(slot)
+        td = link_to 'Destroy', slot, data: { confirm: 'Are you sure?' }, method: :delete
+
+br
+
+= link_to '新規時間帯', new_slot_path
